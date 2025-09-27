@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://t47wwkls71c5"]
+
+[ext_resource type="Script" uid="uid://dd1s1grttxfqy" path="res://mob.gd" id="1_nokgg"]
+[ext_resource type="Texture2D" uid="uid://cttqoicjr6a76" path="res://icon.svg" id="2_ubaqv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jfba5"]
+size = Vector2(77, 77)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="mob" type="RigidBody2D" parent="."]
+collision_mask = 0
+gravity_scale = 0.0
+script = ExtResource("1_nokgg")
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="mob"]
+enable_node_path = NodePath("")
+
+[node name="Sprite2D" type="Sprite2D" parent="mob"]
+position = Vector2(5.000002, 8.000002)
+scale = Vector2(0.6015625, 0.59375)
+texture = ExtResource("2_ubaqv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="mob"]
+position = Vector2(5.5, 8)
+shape = SubResource("RectangleShape2D_jfba5")
