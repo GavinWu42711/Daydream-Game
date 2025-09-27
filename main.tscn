@@ -1,5 +1,6 @@
-[gd_scene load_steps=6 format=4 uid="uid://cnjxtsmumkbp7"]
+[gd_scene load_steps=7 format=4 uid="uid://cnjxtsmumkbp7"]
 
+[ext_resource type="Script" uid="uid://b5ky8mgsgkex5" path="res://player.gd" id="1_h2yge"]
 [ext_resource type="Texture2D" uid="uid://cttqoicjr6a76" path="res://icon.svg" id="1_ig7tw"]
 [ext_resource type="Texture2D" uid="uid://cm1h0cfkly5jc" path="res://green.png" id="2_0xm2m"]
 
@@ -304,6 +305,7 @@ sources/0 = SubResource("TileSetAtlasSource_h2yge")
 [node name="Node2D" type="Node2D"]
 
 [node name="Player" type="CharacterBody2D" parent="."]
+script = ExtResource("1_h2yge")
 
 [node name="Sprite2D" type="Sprite2D" parent="Player"]
 position = Vector2(2, 0)
@@ -314,7 +316,10 @@ texture = ExtResource("1_ig7tw")
 position = Vector2(3, 1)
 shape = SubResource("RectangleShape2D_ig7tw")
 
+[node name="Camera2D" type="Camera2D" parent="Player"]
+
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
+position = Vector2(0, 159.99998)
 scale = Vector2(2.43, 2.43)
 tile_map_data = PackedByteArray("AAD9/wMAAAAFAAYAAAD+/wMAAAAFAAYAAAABAAMAAAAFAAYAAAACAAMAAAAFAAYAAAD//wMAAAAFAAYAAAAAAAMAAAAFAAYAAAADAAMAAAAFAAYAAAAEAAMAAAAFAAYAAAAEAAIAAAAFAAYAAAAEAAEAAAAFAAYAAAAFAAEAAAAFAAYAAAAGAAEAAAAFAAYAAAAHAAEAAAAFAAYAAAAIAAEAAAAFAAYAAAAIAAAAAAAFAAYAAAAJAAAAAAAFAAYAAAAKAAAAAAAFAAYAAAALAAAAAAAFAAYAAAAMAAAAAAAFAAYAAAANAAAAAAAFAAYAAAAOAAAAAAAFAAYAAAAPAP//AAAFAAYAAAAQAP//AAAFAAYAAAARAP//AAAFAAYAAAASAAAAAAAFAAYAAAATAAAAAAAFAAYAAAAUAAAAAAAFAAYAAAAVAAAAAAAFAAYAAAAVAAEAAAAFAAYAAAAWAAEAAAAFAAYAAAAXAAAAAAAFAAYAAAAYAAAAAAAFAAYAAAAZAAEAAAAFAAYAAAAaAAEAAAAFAAYAAAAbAAEAAAAFAAYAAAAcAAEAAAAFAAYAAAAdAAEAAAAFAAYAAAAeAAEAAAAFAAYAAAD8/wMAAAAFAAYAAAD7/wMAAAAFAAYAAAD6/wMAAAAFAAYAAAD5/wMAAAAFAAYAAAD4/wMAAAAFAAYAAAD3/wMAAAAFAAYAAAD2/wMAAAAFAAYAAAD1/wMAAAAFAAYAAAD0/wMAAAAFAAYAAADz/wIAAAAFAAYAAADz/wEAAAAFAAYAAADy/wEAAAAFAAYAAADx/wEAAAAFAAYAAADw/wEAAAAFAAYAAADv/wEAAAAFAAYAAADv/wAAAAAFAAYAAADu/wAAAAAFAAYAAADt/wAAAAAFAAYAAAALAAEAAAAFAAYAAAA=")
 tile_set = SubResource("TileSet_0xm2m")
