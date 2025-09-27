@@ -23,3 +23,6 @@ shape = SubResource("RectangleShape2D_hqtel")
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position_smoothing_enabled = true
 position_smoothing_speed = 6.0
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="Player"]
+enable_mode = 1

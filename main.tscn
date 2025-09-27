@@ -1,16 +1,24 @@
-[gd_scene load_steps=3 format=3 uid="uid://cnjxtsmumkbp7"]
+[gd_scene load_steps=5 format=3 uid="uid://cnjxtsmumkbp7"]
 
 [ext_resource type="PackedScene" uid="uid://dmelg7xvrvxex" path="res://map.tscn" id="1_0xm2m"]
+[ext_resource type="Script" uid="uid://tsfdqooqdmqi" path="res://main.gd" id="1_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://db4cc18hdvu45" path="res://player.tscn" id="2_h2yge"]
+[ext_resource type="PackedScene" uid="uid://t47wwkls71c5" path="res://mob.tscn" id="2_lquwl"]
 
 [node name="main" type="Node"]
+script = ExtResource("1_1bvp3")
+mob_scene = ExtResource("2_lquwl")
+player_scene = ExtResource("2_h2yge")
+map_scene = ExtResource("1_0xm2m")
 
-[node name="Timer" type="Timer" parent="."]
+[node name="MobTimer" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
 
-[node name="Marker2D" type="Marker2D" parent="."]
+[node name="Player" parent="." instance=ExtResource("2_h2yge")]
 
-[node name="Node2D" parent="Marker2D" instance=ExtResource("1_0xm2m")]
+[node name="Map" parent="." instance=ExtResource("1_0xm2m")]
 
-[node name="Marker2D2" type="Marker2D" parent="."]
+[node name="StartPosition" type="Marker2D" parent="."]
 
-[node name="Node2D" parent="Marker2D2" instance=ExtResource("2_h2yge")]
+[connection signal="timeout" from="MobTimer" to="." method="_on_mob_timer_timeout"]

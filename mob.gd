@@ -10,8 +10,8 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if position.x <= 1000:
-		position.x += SPEED
+		position.x += SPEED * delta
 	elif position.x >= 1000:
-		position.x += -1 * SPEED
+		position.x += -1 * SPEED * delta
 	
 	pass
