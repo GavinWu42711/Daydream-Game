@@ -1,3 +1,16 @@
-[gd_scene format=3 uid="uid://cnjxtsmumkbp7"]
+[gd_scene load_steps=3 format=3 uid="uid://cnjxtsmumkbp7"]
+
+[ext_resource type="PackedScene" uid="uid://dmelg7xvrvxex" path="res://map.tscn" id="1_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://db4cc18hdvu45" path="res://player.tscn" id="2_h2yge"]
 
 [node name="main" type="Node"]
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Marker2D" type="Marker2D" parent="."]
+
+[node name="Node2D" parent="Marker2D" instance=ExtResource("1_0xm2m")]
+
+[node name="Marker2D2" type="Marker2D" parent="."]
+
+[node name="Node2D" parent="Marker2D2" instance=ExtResource("2_h2yge")]
