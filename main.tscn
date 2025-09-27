@@ -8,8 +8,6 @@
 [node name="main" type="Node"]
 script = ExtResource("1_1bvp3")
 mob_scene = ExtResource("2_lquwl")
-player_scene = ExtResource("2_h2yge")
-map_scene = ExtResource("1_0xm2m")
 
 [node name="MobTimer" type="Timer" parent="."]
 wait_time = 5.0

@@ -1,7 +1,6 @@
 extends Node
 @export var mob_scene: PackedScene
-@export var player_scene: PackedScene
-@export var map_scene: PackedScene
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

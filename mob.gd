@@ -2,16 +2,17 @@ extends RigidBody2D
 
 const SPEED = 300
 
+var player 
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	player = get_node("Player")
 	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if position.x <= 1000:
-		position.x += SPEED * delta
-	elif position.x >= 1000:
-		position.x += -1 * SPEED * delta
-	
+	follow_player()
+
+func follow_player() -> void:
 	pass
